@@ -50,7 +50,7 @@ public class bill extends bm
 							q = s.nextInt();
 							qbill[count] = q;
 							tbill[count] = p*q;
-							System.out.println("You have added "+qbill[count]+" "+sbill[count]+"in your cart!");
+							System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
 							count = count + 1;
 						}
 						else if(ch>7)
@@ -82,7 +82,7 @@ public class bill extends bm
 							q = s.nextInt();
 							qbill[count] = q;
 							tbill[count] = p*q;
-							System.out.println("You have added "+qbill[count]+" "+sbill[count]+"in your cart!");
+							System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
 							count = count + 1;
 						}
 						else if(ch>7)
@@ -114,7 +114,7 @@ public class bill extends bm
 							q = s.nextInt();
 							qbill[count] = q;
 							tbill[count] = p*q;
-							System.out.println("You have added "+qbill[count]+" "+sbill[count]+"in your cart!");
+							System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
 							count = count + 1;
 						}
 						else if(ch>7)
@@ -146,7 +146,7 @@ public class bill extends bm
 							q = s.nextInt();
 							qbill[count] = q;
 							tbill[count] = p*q;
-							System.out.println("You have added "+qbill[count]+" "+sbill[count]+"in your cart!");
+							System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
 							count = count + 1;
 						}
 						else if(ch>7)
