@@ -2,6 +2,7 @@ import food.*;
 import toiletries.*;
 import bm.*;
 import electronics.*;
+import stationary.*;
 import java.util.Scanner;
 public class bill extends bm
 {
@@ -92,7 +93,7 @@ public class bill extends bm
 					break;
 				case 3:
 					ch=0;
-					stationary S=new stationary();
+					stationary st = new stationary();
 					System.out.println("==========Stationary==========");
 					System.out.println("1. Notebook");
 					System.out.println("2. Pen");
@@ -107,8 +108,8 @@ public class bill extends bm
 						ch = s.nextInt();
 						if(ch<7)
 						{
-							sbill[count] = S.get_item(ch-1);
-							p = S.get_price(ch-1);
+							sbill[count] = st.get_item(ch-1);
+							p = st.get_price(ch-1);
 							System.out.print("Quantity = ");
 							q = s.nextInt();
 							qbill[count] = q;
