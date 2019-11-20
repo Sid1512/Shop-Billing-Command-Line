@@ -4,17 +4,22 @@ import bm.*;
 import electronics.*;
 import stationary.*;
 import homedecor.*;
-import java.util.Scanner;
+import getdt.*;
+import java.util.*;
 public class bill extends bm
 {
 	public static void main(String args[])
 	{
+		Scanner s = new Scanner(System.in);
+		getdt g = new getdt();
 		String[] sbill = new String[50];
 		int[] tbill = new int[50];
 		int[] qbill = new int[50];
 		int count = 0,bs = 0;
 		int p,q,ch;
-		Scanner s = new Scanner(System.in);
+		String tab = "", date = null, time = null;
+		date = g.GetDate(date);
+		time = g.GetTime(time);
 		while(bs != 6)
 		{
 			System.out.println("=========="+name+"==========");
@@ -23,7 +28,7 @@ public class bill extends bm
 			System.out.println("3. Stationary");
 			System.out.println("4. Toiletries");
 			System.out.println("5. Home Decor");
-			System.out.println("6. Exit");
+			System.out.println("6. Exit & Print Bill");
 			System.out.print("Enter your choice = ");
 			bs = s.nextInt();
 			switch(bs)
@@ -204,13 +209,28 @@ public class bill extends bm
 					}
 					break;
 				case 6:
-					//thanks,exit
+					System.out.println("========================= Bill =========================");
+					System.out.println(date + "					" + time);
+					System.out.println("======================= BIG Mart =======================");
+					System.out.print(String.format("-%-" + 22 + "s","Item Name"));
+					System.out.print(String.format("%-" + 22 + "s","Quantity"));
+					System.out.print(String.format("%-" + 22 + "s","Total Amount"));
+					System.out.println("\n========================================================");
+					for(int k = 0; k < count; k++)
+					{	
+						System.out.print(String.format("%-" + 22 + "s", sbill[k]));
+						System.out.print(String.format("%-" + 22 + "d", qbill[k]));
+						System.out.print(String.format("%-" + 22 + "d", tbill[k]));
+						System.out.println();
+
+					}
+					System.out.println("=======================Thank You========================");
 					break;
 				default:
 					System.out.println("Wrong choice entered!");
 			}	
 		}
-		System.out.print("Your Name = ");
+		System.out.print("Please enter your Name = ");
 		String n = s.next();
 	}
 }
