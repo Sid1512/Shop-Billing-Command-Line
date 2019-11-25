@@ -15,7 +15,7 @@ public class bill extends bm
 		String[] sbill = new String[50];
 		int[] tbill = new int[50];
 		int[] qbill = new int[50];
-		int count = 0,bs = 0;
+		int count = 0,bs = 0,total = 0;
 		int p,q,ch;
 		String tab = "", date = null, time = null;
 		date = g.GetDate(date);
@@ -209,12 +209,14 @@ public class bill extends bm
 					}
 					break;
 				case 6:
+					System.out.print("Please enter your Name = ");
+					String n = s.next();
 					System.out.println("========================= Bill =========================");
 					System.out.println(date + "					" + time);
 					System.out.println("======================= BIG Mart =======================");
-					System.out.print(String.format("-%-" + 22 + "s","Item Name"));
+					System.out.print(String.format("%-" + 22 + "s","Item Name"));
 					System.out.print(String.format("%-" + 22 + "s","Quantity"));
-					System.out.print(String.format("%-" + 22 + "s","Total Amount"));
+					System.out.print(String.format("%-" + 22 + "s","Item Total"));
 					System.out.println("\n========================================================");
 					for(int k = 0; k < count; k++)
 					{	
@@ -224,14 +226,20 @@ public class bill extends bm
 						System.out.println();
 
 					}
-					System.out.println("=======================Thank You========================");
+					for (int i=0; i<tbill.length; i++)
+					{
+						total = total + tbill[i];
+					}
+					System.out.println("========================================================");
+					System.out.print(String.format("%" + 33 + "s","Total Amount"));
+					System.out.print(String.format("%" + 11 + "s","Rs. "));
+					System.out.print(total);
+					System.out.println("\n=======================Thank You========================");
 					break;
 				default:
 					System.out.println("Wrong choice entered!");
 			}	
 		}
-		System.out.print("Please enter your Name = ");
-		String n = s.next();
 	}
 }
 
