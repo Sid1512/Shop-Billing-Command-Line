@@ -37,7 +37,7 @@ public class bill extends bm
 					food f = new food();
 					System.out.println("==========Food==========");
 					System.out.println("1. Chips");
-					System.out.println("2. Choclates");
+					System.out.println("2. Chocolates");
 					System.out.println("3. Biscuits");
 					System.out.println("4. Cake");
 					System.out.println("5. Milk");
@@ -115,7 +115,7 @@ public class bill extends bm
 					System.out.println("3. Mouse");
 					System.out.println("4. Gamepad");
 					System.out.println("5. Hard Disk");
-					System.out.println("6. Bluetooth Speakers");
+					System.out.println("6. Pendrive");
 					System.out.println("7. Delete Last Item");
 					System.out.println("8. Exit");
 					while(ch != 8)
