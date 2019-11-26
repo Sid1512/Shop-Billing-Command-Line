@@ -5,6 +5,7 @@ import electronics.*;
 import stationary.*;
 import homedecor.*;
 import getdt.*;
+import file_append.*;
 import java.util.*;
 public class bill extends bm
 {
@@ -235,6 +236,8 @@ public class bill extends bm
 					System.out.print(String.format("%" + 11 + "s","Rs. "));
 					System.out.print(total);
 					System.out.println("\n=======================Thank You========================");
+					file_append fa = new file_append();
+					fa.AppendToFile("data.txt",n,sbill,qbill,tbill,count);
 					break;
 				default:
 					System.out.println("Wrong choice entered!");
