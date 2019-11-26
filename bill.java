@@ -86,14 +86,21 @@ public class bill extends bm
 						}
 						else if(ch == 7)
 						{
-							if(qbill[count - 1]>1)
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+							if(count != 0)
+							{
+								if(qbill[count - 1]>1)
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+								else
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
+								count = count - 1;
+								qbill[count] = 0;
+								sbill[count] = null;
+								qbill[count] = 0;
+							}
 							else
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
-							count = count - 1;
-							qbill[count] = 0;
-							sbill[count] = null;
-							qbill[count] = 0;
+							{
+								System.out.println("No item in cart!");
+							}
 						}
 						else
 							System.out.println("=========================");
@@ -153,14 +160,21 @@ public class bill extends bm
 						}
 						else if(ch == 7)
 						{
-							if(qbill[count - 1]>1)
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+							if(count != 0)
+							{
+								if(qbill[count - 1]>1)
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+								else
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
+								count = count - 1;
+								qbill[count] = 0;
+								sbill[count] = null;
+								qbill[count] = 0;
+							}
 							else
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
-							count = count - 1;
-							qbill[count] = 0;
-							sbill[count] = null;
-							qbill[count] = 0;
+							{
+								System.out.println("No item in cart!");
+							}
 						}
 						else
 							System.out.println("=========================");
@@ -220,14 +234,21 @@ public class bill extends bm
 						}
 						else if(ch == 7)
 						{
-							if(qbill[count - 1]>1)
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+							if(count != 0)
+							{
+								if(qbill[count - 1]>1)
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+								else
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
+								count = count - 1;
+								qbill[count] = 0;
+								sbill[count] = null;
+								qbill[count] = 0;
+							}
 							else
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
-							count = count - 1;
-							qbill[count] = 0;
-							sbill[count] = null;
-							qbill[count] = 0;
+							{
+								System.out.println("No item in cart!");
+							}
 						}
 						else
 							System.out.println("=========================");
@@ -287,14 +308,21 @@ public class bill extends bm
 						}
 						else if(ch == 7)
 						{
-							if(qbill[count - 1]>1)
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+							if(count != 0)
+							{
+								if(qbill[count - 1]>1)
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+								else
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
+								count = count - 1;
+								qbill[count] = 0;
+								sbill[count] = null;
+								qbill[count] = 0;
+							}
 							else
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
-							count = count - 1;
-							qbill[count] = 0;
-							sbill[count] = null;
-							qbill[count] = 0;
+							{
+								System.out.println("No item in cart!");
+							}
 						}
 						else
 							System.out.println("=========================");
@@ -354,14 +382,21 @@ public class bill extends bm
 						}
 						else if(ch == 7)
 						{
-							if(qbill[count - 1]>1)
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count]+"s from your cart!");
+							if(count != 0)
+							{
+								if(qbill[count - 1]>1)
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+								else
+									System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
+								count = count - 1;
+								qbill[count] = 0;
+								sbill[count] = null;
+								qbill[count] = 0;
+							}
 							else
-								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count]+" from your cart!");
-							count = count - 1;
-							qbill[count] = 0;
-							sbill[count] = null;
-							qbill[count] = 0;
+							{
+								System.out.println("No item in cart!");
+							}
 						}
 						else
 							System.out.println("=========================");
