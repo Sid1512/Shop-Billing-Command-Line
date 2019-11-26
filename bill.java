@@ -46,7 +46,7 @@ public class bill extends bm
 					System.out.println("8. Exit");
 					while(ch != 8)
 					{
-						System.out.print("Enter your choice = ");
+						System.out.print("Enter your choice (From Food Menu) = ");
 						ch = s.nextInt();
 						if(ch>8 || ch<1)
 							System.out.println("Wrong choice entered!");
@@ -120,7 +120,7 @@ public class bill extends bm
 					System.out.println("8. Exit");
 					while(ch != 8)
 					{
-						System.out.print("Enter your choice = ");
+						System.out.print("Enter your choice (From Electronics Menu) = ");
 						ch = s.nextInt();
 						if(ch>8 || ch<1)
 							System.out.println("Wrong choice entered!");
@@ -194,7 +194,7 @@ public class bill extends bm
 					System.out.println("8. Exit");
 					while(ch != 8)
 					{
-						System.out.print("Enter your choice = ");
+						System.out.print("Enter your choice (From Stationary Menu) = ");
 						ch = s.nextInt();
 						if(ch>8 || ch<1)
 							System.out.println("Wrong choice entered!");
@@ -268,7 +268,7 @@ public class bill extends bm
 					System.out.println("8. Exit");
 					while(ch != 8)
 					{
-						System.out.print("Enter your choice = ");
+						System.out.print("Enter your choice (From Toiletries Menu) = ");
 						ch = s.nextInt();
 						if(ch>8 || ch<1)
 							System.out.println("Wrong choice entered!");
@@ -342,7 +342,7 @@ public class bill extends bm
 					System.out.println("8. Exit");
 					while(ch != 8)
 					{
-						System.out.print("Enter your choice = ");
+						System.out.print("Enter your choice (From HomeDecor Menu) = ");
 						ch = s.nextInt();
 						if(ch>8 || ch<1)
 							System.out.println("Wrong choice entered!");
