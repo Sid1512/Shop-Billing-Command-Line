@@ -17,10 +17,8 @@ public class bill extends bm
 		int[] tbill = new int[50];
 		int[] qbill = new int[50];
 		int count = 0,bs = 0,total = 0;
-		int p,q,ch;
+		int p,q,ch,check;
 		String tab = "", date = null, time = null;
-		date = g.GetDate(date);
-		time = g.GetTime(time);
 		while(bs != 6)
 		{
 			System.out.println("=========="+name+"==========");
@@ -44,27 +42,59 @@ public class bill extends bm
 					System.out.println("4. Cake");
 					System.out.println("5. Milk");
 					System.out.println("6. Bread");
-					System.out.println("7. Exit");
-					while(ch != 7)
+					System.out.println("7. Delete Last Item");
+					System.out.println("8. Exit");
+					while(ch != 8)
 					{
 						System.out.print("Enter your choice = ");
 						ch = s.nextInt();
-						if(ch<7)
+						if(ch>8 || ch<1)
+							System.out.println("Wrong choice entered!");
+						else if(ch<7)
 						{
 							sbill[count] = f.get_item(ch-1);
 							p = f.get_price(ch-1);
 							System.out.print("Quantity = ");
 							q = s.nextInt();
-							qbill[count] = q;
-							tbill[count] = p*q;
-							if(q>1)
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
-							else
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
-							count = count + 1;
+							check = 0;
+							while(check != 1)
+							{
+								if(q<1)
+								{
+									System.out.println("Quantity cant be negative, Please enter quantity again!");
+									System.out.print("Quantity = ");
+									q = s.nextInt();
+									check = 0;
+								}
+								else if(q>1)
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+								else
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+							}
 						}
-						else if(ch>7)
-							System.out.println("Wrong choice entered!");
+						else if(ch == 7)
+						{
+							if(qbill[count - 1]>1)
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+							else
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
+							count = count - 1;
+							qbill[count] = 0;
+							sbill[count] = null;
+							qbill[count] = 0;
+						}
 						else
 							System.out.println("=========================");
 					}
@@ -79,27 +109,59 @@ public class bill extends bm
 					System.out.println("4. Gamepad");
 					System.out.println("5. Hard Disk");
 					System.out.println("6. Bluetooth Speakers");
-					System.out.println("7. Exit");
-					while(ch != 7)
+					System.out.println("7. Delete Last Item");
+					System.out.println("8. Exit");
+					while(ch != 8)
 					{
 						System.out.print("Enter your choice = ");
 						ch = s.nextInt();
-						if(ch<7)
+						if(ch>8 || ch<1)
+							System.out.println("Wrong choice entered!");
+						else if(ch<7)
 						{
 							sbill[count] = e.get_item(ch-1);
 							p = e.get_price(ch-1);
 							System.out.print("Quantity = ");
 							q = s.nextInt();
-							qbill[count] = q;
-							tbill[count] = p*q;
-							if(q>1)
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
-							else
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
-							count = count + 1;
+							check = 0;
+							while(check != 1)
+							{
+								if(q<1)
+								{
+									System.out.println("Quantity cant be negative, Please enter quantity again!");
+									System.out.print("Quantity = ");
+									q = s.nextInt();
+									check = 0;
+								}
+								else if(q>1)
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+								else
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+							}
 						}
-						else if(ch>7)
-							System.out.println("Wrong choice entered!");
+						else if(ch == 7)
+						{
+							if(qbill[count - 1]>1)
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+							else
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
+							count = count - 1;
+							qbill[count] = 0;
+							sbill[count] = null;
+							qbill[count] = 0;
+						}
 						else
 							System.out.println("=========================");
 					}
@@ -114,27 +176,59 @@ public class bill extends bm
 					System.out.println("4. Notepad");
 					System.out.println("5. Sketch Book");
 					System.out.println("6. Sketch pens");
-					System.out.println("7. Exit");
-					while(ch != 7)
+					System.out.println("7. Delete Last Item");
+					System.out.println("8. Exit");
+					while(ch != 8)
 					{
 						System.out.print("Enter your choice = ");
 						ch = s.nextInt();
-						if(ch<7)
+						if(ch>8 || ch<1)
+							System.out.println("Wrong choice entered!");
+						else if(ch<7)
 						{
 							sbill[count] = st.get_item(ch-1);
 							p = st.get_price(ch-1);
 							System.out.print("Quantity = ");
 							q = s.nextInt();
-							qbill[count] = q;
-							tbill[count] = p*q;
-							if(q>1)
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
-							else
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
-							count = count + 1;
+							check = 0;
+							while(check != 1)
+							{
+								if(q<1)
+								{
+									System.out.println("Quantity cant be negative, Please enter quantity again!");
+									System.out.print("Quantity = ");
+									q = s.nextInt();
+									check = 0;
+								}
+								else if(q>1)
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+								else
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+							}
 						}
-						else if(ch>7)
-							System.out.println("Wrong choice entered!");
+						else if(ch == 7)
+						{
+							if(qbill[count - 1]>1)
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+							else
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
+							count = count - 1;
+							qbill[count] = 0;
+							sbill[count] = null;
+							qbill[count] = 0;
+						}
 						else
 							System.out.println("=========================");
 					}
@@ -149,27 +243,59 @@ public class bill extends bm
 					System.out.println("4. Handwash");
 					System.out.println("5. Brush");
 					System.out.println("6. Paste");
-					System.out.println("7. Exit");
-					while(ch != 7)
+					System.out.println("7. Delete Last Item");
+					System.out.println("8. Exit");
+					while(ch != 8)
 					{
 						System.out.print("Enter your choice = ");
 						ch = s.nextInt();
-						if(ch<7)
+						if(ch>8 || ch<1)
+							System.out.println("Wrong choice entered!");
+						else if(ch<7)
 						{
 							sbill[count] = t.get_item(ch-1);
 							p = t.get_price(ch-1);
 							System.out.print("Quantity = ");
 							q = s.nextInt();
-							qbill[count] = q;
-							tbill[count] = p*q;
-							if(q>1)
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
-							else
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
-							count = count + 1;
+							check = 0;
+							while(check != 1)
+							{
+								if(q<1)
+								{
+									System.out.println("Quantity cant be negative, Please enter quantity again!");
+									System.out.print("Quantity = ");
+									q = s.nextInt();
+									check = 0;
+								}
+								else if(q>1)
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+								else
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+							}
 						}
-						else if(ch>7)
-							System.out.println("Wrong choice entered!");
+						else if(ch == 7)
+						{
+							if(qbill[count - 1]>1)
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+"s from your cart!");
+							else
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count-1]+" from your cart!");
+							count = count - 1;
+							qbill[count] = 0;
+							sbill[count] = null;
+							qbill[count] = 0;
+						}
 						else
 							System.out.println("=========================");
 					}
@@ -184,32 +310,66 @@ public class bill extends bm
 					System.out.println("4. Candles");
 					System.out.println("5. Vase");
 					System.out.println("6. Lamp");
-					System.out.println("7. Exit");
-					while(ch != 7)
+					System.out.println("7. Delete Last Item");
+					System.out.println("8. Exit");
+					while(ch != 8)
 					{
 						System.out.print("Enter your choice = ");
 						ch = s.nextInt();
-						if(ch<7)
+						if(ch>8 || ch<1)
+							System.out.println("Wrong choice entered!");
+						else if(ch<7)
 						{
 							sbill[count] = h.get_item(ch-1);
 							p = h.get_price(ch-1);
 							System.out.print("Quantity = ");
 							q = s.nextInt();
-							qbill[count] = q;
-							tbill[count] = p*q;
-							if(q>1)
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
-							else
-								System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
-							count = count + 1;
+							check = 0;
+							while(check != 1)
+							{
+								if(q<1)
+								{
+									System.out.println("Quantity cant be negative, Please enter quantity again!");
+									System.out.print("Quantity = ");
+									q = s.nextInt();
+									check = 0;
+								}
+								else if(q>1)
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+"s in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+								else
+								{
+									qbill[count] = q;
+									tbill[count] = p*q;
+									System.out.println("You have added "+qbill[count]+" "+sbill[count]+" in your cart!");
+									count = count + 1;
+									check = 1;
+								}
+							}
 						}
-						else if(ch>7)
-							System.out.println("Wrong choice entered!");
+						else if(ch == 7)
+						{
+							if(qbill[count - 1]>1)
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count]+"s from your cart!");
+							else
+								System.out.println("You have deleted "+qbill[count-1]+" "+sbill[count]+" from your cart!");
+							count = count - 1;
+							qbill[count] = 0;
+							sbill[count] = null;
+							qbill[count] = 0;
+						}
 						else
 							System.out.println("=========================");
 					}
 					break;
 				case 6:
+					date = g.GetDate(date);
+					time = g.GetTime(time);
 					System.out.print("Please enter your Name = ");
 					String n = s.next();
 					System.out.println("========================= Bill =========================");

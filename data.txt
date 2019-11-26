@@ -1,1 +1,5 @@
-s[Cake,2,500],[Biscuits,4,120]
+Aditya : [Chips,69,1380],[Biscuits,2,60],[Pen,4,140]
+abhinav : [Chips,5,100],[Milk,9,225],[Brush,1,30],[Brush,0,0]
+Sid : [Choclates,3,120],[Biscuits,3,90]
+ass : [Chips,2,40],[Bread,11,484]
+Sid : [Chips,2,40],[Choclates,2,80]
