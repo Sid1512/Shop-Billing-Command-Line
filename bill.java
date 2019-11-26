@@ -225,7 +225,6 @@ public class bill extends bm
 						System.out.print(String.format("%-" + 22 + "d", qbill[k]));
 						System.out.print(String.format("%-" + 22 + "d", tbill[k]));
 						System.out.println();
-
 					}
 					for (int i=0; i<tbill.length; i++)
 					{
