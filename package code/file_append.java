@@ -7,7 +7,8 @@ public class file_append
         try 
         {
             String str;
-            BufferedWriter out = new BufferedWriter(new FileWriter(fileName, true)); 
+            FileWriter f1 = new FileWriter(fileName);
+            BufferedWriter out = new BufferedWriter(f1); 
             str = name + " : ";
             out.write(str);
             for(int i = 0;i < count;i++)
@@ -25,7 +26,7 @@ public class file_append
             }
             out.write("\n");
             out.close(); 
-        } 
+        }
         catch(IOException e) 
         { 
             System.out.println("exception occoured" + e); 
